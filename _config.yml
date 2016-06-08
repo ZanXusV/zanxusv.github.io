@@ -1,11 +1,11 @@
 # Site settings
-title: "MADness"
-description: MAD for Jekyll
+title: "ZanXus"
+description: ZanXus-Jekyll
 logo: favicon.png
-discus_shortname: MADness
+discus_shortname: ZanXus
 header-img: img/home-bg.jpg
-email: mad@ness.com
-url: http://madforjekyll.github.io
+email: mr.zanxus@gmail.com
+url: http://zanxusv.github.io
 search: true
 share: true
 comments: true
@@ -18,19 +18,19 @@ wpm: 200
 
 # Owner/author information
 owner:
-  name:   MADness
+  name:   ZanXus
   avatar: avatar.jpg
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    MAD for Jekyll
+  description:    ZanXus Jekyll
 
 # Social networking links used in footer. Update and remove as you like.
-twitter_username: MAD4Jekyll
-facebook_username: MAD4Jekyll
-github_username: MAD4Jekyll
-deviantart_username: MAD4Jekyll
-500px_username: MAD4Jekyll
-flickr_username: MAD4Jekyll
-instagram_username: MAD4Jekyll
+#twitter_username: MAD4Jekyll
+#facebook_username: MAD4Jekyll
+github_username: ZanXusV
+#deviantart_username: MAD4Jekyll
+#500px_username: MAD4Jekyll
+#flickr_username: MAD4Jekyll
+#instagram_username: MAD4Jekyll
 
  
 # Internal nav
@@ -45,20 +45,12 @@ destination:      	 ./_site
 port:             	 4000
 
 # Build settings
-highlighter:         pygments
-markdown:           redcarpet
-redcarpet:
-    extensions:     
-     - Hard_wrap
-     - no_intra_emphasis
-     - strikethrough
-     - fenced_code_blocks
-     - autolink
-     - tables
-     - with_toc_data
-     - highlight
-     - footnotes
-    input:          GFM
+highlighter:         rouge
+markdown:           kramdown
+kramdown:
+    auto_ids: true
+    syntax_highlighter: rouge
+    input: GFM
 sass:
     style:          :compressed
 paginate: 5
