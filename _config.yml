@@ -55,7 +55,7 @@ sass:
     style:          :compressed
 paginate: 5
 paginate_path: "/writing/page:num/"
-permalink: "/writing/:title/"
+#permalink: "/writing/:title/"
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 slugify: "pretty"
 
