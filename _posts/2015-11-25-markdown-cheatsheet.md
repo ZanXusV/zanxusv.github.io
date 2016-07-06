@@ -6,8 +6,8 @@ date:       2015-11-25 12:00:00
 author:     "MADness"
 header-img: "img/blog/header/post-bg-02.jpg"
 thumbnail: /img/blog/thumbs/thumb02.png
-tags: [tag-name-one, tag-name-two]
-categories: [cat01, cat02]
+tags: [lambda]
+categories: [java, linux]
 ---
 
 > This is Markdown Cheatsheet for **MAD4Jekyll**, this Jekyll theme. Please check the raw content of this file for the markdown usage.
