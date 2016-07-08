@@ -46,13 +46,23 @@ port:             	 4000
 
 # Build settings
 highlighter:         rouge
+
+
 markdown:           kramdown
 kramdown:
     auto_ids: true
     syntax_highlighter: rouge
     input: GFM
+    syntax_highlighter_opts:
+        css_class: 'highlight'
+        span:
+            line_numbers: false
+        block:
+            line_numbers: true
+            start_line: 1
 sass:
     style:          :compressed
+
 paginate: 5
 paginate_path: "/writing/page:num/"
 #permalink: "/writing/:title/"
@@ -63,4 +73,6 @@ slugify: "pretty"
 google_analytics:   UA-xxxxxxxx-x
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify:
+
+
