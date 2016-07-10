@@ -4,6 +4,7 @@ body {
   color: #dddddd;
   background-color: #30292B;
   background-image: url('../img/pattern.jpg');
+  background-size: cover;
   background-attachment: fixed;
 }
 p {
