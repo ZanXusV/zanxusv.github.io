@@ -22,45 +22,40 @@ share: false
 
 ```xml
 <filter>
-    <filter-name>merSessionFilter</filter-name>
-    <filter-class>com.ucf.staging.filter.MerchantPcSessionFilter
+    <filter-name>SessionFilter</filter-name>
+    <filter-class>com.ucf.filter.SessionFilter
     </filter-class>
     <init-param>
         <description>
-        If this param not configed,it will redirect to the root path(/) of the 
-        web application when user not loged in. 
+        The url that will redirect to if session not detected.
+        And if this param not configed,it will redirect to 
+        the root path(/) of the web application. 
         </description>
         <param-name>redirectUrl</param-name>
-        <param-value>/ebusiness/merchant/pc/account/login</param-value>
+        <param-value>/login</param-value>
     </init-param>
     <init-param>
         <description>
-				另外，参数 redirectUrl 的值不用包含在该正则表达式中，因为 redirectUrl 对应的 url
-				会被自动放行。
-				还有一点需要说明的是，该参数的值不包含web应用的 ContextPath。
+        The regex of url that won't be intercepted.The value 
+        of redirectUrl does not need to add to the regex 
+        because the redirectUrl will not be intercepted,besides 
+        the contextPath of the web application is not included.
         </description>
         <param-name>excepUrlRegex</param-name>
-        <param-value>/ebusiness/merchant/pc/login|(merchant/merLoginPost)</param-value>
-        <param-value>/ebusiness/merchant/pc/merchant/merLoginPost</param-value>
+        <!--the requestmapping /loginPost and /registPost 
+        will not be intercept, and the <param-value>
+         can be multiple to match more request url-->
+        <param-value>/(login|regist)Post/</param-value>
     </init-param>
 </filter>
 
 <filter-mapping>
-	<filter-name>merSessionFilter</filter-name>
-	<url-pattern>/ebusiness/merchant/pc/*</url-pattern>
+    <filter-name>SessionFilter</filter-name>
+    <!--all url under the url-pattern will be filtered,and the 
+    filter mapping also can be multiple-->
+    <url-pattern>/*</url-pattern>
 </filter-mapping>
 ```
-
-<div class="row" style="margin-left: 10pt;">
-<p style="float: left; font-size: 9pt; margin-right:1em;"> 
-   <a href="{{ site.baseurl }}/img/blog/lb-lrg/img1.jpg" data-lightbox="gallery1" data-title="The first image" style="float: left; margin-right: -10%; margin-bottom: 1em;">
-     <img src="{{ site.baseurl }}/img/blog/lb-sm/lbs01.png">Image#01</a></p>
-        
-<p style="float: left; font-size: 9pt; margin-right:1em;"> 
-   <a href="{{ site.baseurl }}/img/blog/lb-lrg/img2.jpg" data-lightbox="gallery1" data-title="The second image" style="float: left; margin-right: -10%; margin-bottom: 1em;">
-     <img src="{{ site.baseurl }}/img/blog/lb-sm/lbs02.png">Image#02</a></p>
-</div>   
+<span></span>
 
 > If the photos are **not** included in the `div` the text will float on the right.
-
-###### Image Source: [UNSPLASH](https://unsplash.com/photos/j0g8taxHZa0)
