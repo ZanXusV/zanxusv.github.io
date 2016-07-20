@@ -8,8 +8,8 @@ header-img: "img/blog/header/post-bg-01.jpg"
 thumbnail: /img/blog/thumbs/thumb01.png
 tags: [session,filter]
 category: [java]
-comments: false
-share: false
+comments: true
+share: true
 ---
 
 # This filter is made to make sure a  request is legal. 
@@ -60,8 +60,6 @@ share: false
 > ### Secondly,Create the **_SessionFilter_**{: style="color: red"} class.
 
 ~~~ java
-package com.ucf.staging.filter;
-
 import java.io.IOException;
 import java.util.regex.Pattern;
 
@@ -117,7 +115,7 @@ public class SessionFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) res;
         String requestURI = request.getRequestURI();
         
-        //if requst uri matches the excepetUrl pattern then let it go 
+        //if a requst uri matches the excepetUrl pattern then let it through 
         if (excepUrlPattern.matcher(requestURI).matches()) {
                 chain.doFilter(req, res); 
                 return; 
@@ -149,7 +147,6 @@ public class SessionFilter implements Filter {
             String session = RedisUtils.executeResult((x) -> x.get(key), GlobalConsts.REDIS_INDEX);
             logger.info("session content"+session);
             if (StringUtils.isBlank(session)) {
-                logger.info("nothing in session, redirect!");
                 response.sendRedirect(redirectUrl);
                 return;
             } else {
@@ -192,7 +189,7 @@ public class SessionFilter implements Filter {
     response.addCookie(cookie);
 ~~~
 
-### Here's the RedisUtil code.
+> ### Here's the RedisUtil.
 
 ~~~java
 package com.ucf.staging.common;
@@ -281,9 +278,8 @@ public final class RedisUtils {
 		try {
 			consumer.accept(jedis);
 		} catch (Exception e) {
-		    logger.error("类 [{}]调用[{}]参数[{}]异常", "RedisUtils", "execute",
+		    logger.error("Class [{}]call[{}]param[{}]error", "RedisUtils", "execute",
 	                    String.format("consumer:%s,  index:%s", consumer.toString(), Integer.toString(index)), e);
-//			logger.error("", e);
 		} finally {
 			closeJedis(jedis);
 		}
@@ -297,9 +293,8 @@ public final class RedisUtils {
 		try {
 			apply = function.apply(jedis);
 		} catch (Exception e) {
-		    logger.error("类 [{}]调用[{}]参数[{}]异常", "RedisUtils", "executeResult",
+		    logger.error("Class [{}]call[{}]param[{}]error", "RedisUtils", "executeResult",
                             String.format("function:%s,  index:%s", function.toString(), Integer.toString(index)), e);
-//			logger.error("", e);
 		} finally {
 			closeJedis(jedis);
 		}
@@ -313,4 +308,6 @@ public final class RedisUtils {
 
 }
 ~~~
+
+> ## Finally,the above codes are neither complete or executable,some sensetive codes aren't included in.It's just a reference for such a function and mostly for my learning and working experience :). 
 
