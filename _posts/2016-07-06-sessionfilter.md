@@ -171,7 +171,7 @@ public class SessionFilter implements Filter {
 
 > ### Here's the login code segment.
 
-~~~java
+~~~ java
     String sessionId = DigestUtils.md5Hex(orgId + password);
     CommodityOrgVo orgVo = orgService.toCorgVo(org);
     RedisUtils.execute((x) -> x.set(sessionId, JSON.toJSONString(orgVo)),GlobalConsts.REDIS_INDEX);//set session to redis
@@ -191,7 +191,7 @@ public class SessionFilter implements Filter {
 
 > ### Here's the RedisUtil.
 
-~~~java
+~~~ java
 package com.ucf.staging.common;
 
 import java.util.HashSet;
@@ -309,5 +309,5 @@ public final class RedisUtils {
 }
 ~~~
 
-> ## Finally,the above codes are neither complete or executable,some sensetive codes aren't included in.It's just a reference for such a function and mostly for my learning and working experience :). 
+> ## Finally,the above codes are neither complete or executable,some sensitive codes aren't included in.It's just a reference for such a function and mostly for my learning and working record :). 
 
