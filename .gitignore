@@ -1,3 +1,5 @@
 /.idea/*
 ZanXus.iml
 /_site/*
+.idea/
+_site/
