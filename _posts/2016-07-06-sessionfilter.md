@@ -12,10 +12,6 @@ comments: true
 share: true
 ---
 
-# This filter is made to make sure a  request is legal. 
-
-## It's a  manage system in the project,when a client send a request to server,the server need to detect if the request includes  legal session.
-
  
 > ### Firstly,add properties in **_web.xml_**{: style="color: red"}.
 
@@ -169,7 +165,7 @@ public class SessionFilter implements Filter {
 ~~~
 
 
-> ### Here's the login code segment.
+> ### Login code segment.
 
 ~~~ java
     String sessionId = DigestUtils.md5Hex(orgId + password);
@@ -189,7 +185,7 @@ public class SessionFilter implements Filter {
     response.addCookie(cookie);
 ~~~
 
-> ### Here's the RedisUtil.
+> ### RedisUtil.
 
 ~~~ java
 package com.ucf.staging.common;
@@ -309,5 +305,4 @@ public final class RedisUtils {
 }
 ~~~
 
-> ## Finally,the above codes are neither complete or executable,some sensitive codes aren't included in.It's just a reference for such a function and mostly for my learning and working record :). 
 
