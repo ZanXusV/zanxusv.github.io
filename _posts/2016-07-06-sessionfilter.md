@@ -4,8 +4,8 @@ title:      "SessionFilter"
 subtitle:   "Java login session filter"
 date:       2016-07-06 18:54:00
 author:     "ZanXus"
-header-img: "img/blog/header/post-bg-01.jpg"
-thumbnail: /img/blog/thumbs/thumb01.png
+header-img: "img/blog/header/post-bg-03.jpg"
+thumbnail: /img/blog/thumbs/thumb03.png
 tags: [session,filter]
 category: [java]
 comments: true
