@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      "Dynamic Tables And Rows"
-subtitle:   "Add Elements Dynamicly"
-date:       2016-11-16 19:22:00
+subtitle:   "Add elements dynamicly"
+date:       2016-11-16 19:22:00+0800
 author:     "ZanXus"
 header-img: "img/blog/header/post-bg-02.jpg"
 thumbnail: /img/blog/thumbs/thumb02.png

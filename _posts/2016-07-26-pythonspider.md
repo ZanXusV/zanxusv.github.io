@@ -2,10 +2,10 @@
 layout:     post
 title:      "Python3 Urllib"
 subtitle:   "Crawling with urllib"
-date:       2016-07-25 17:19:00
+date:       2016-07-25 17:19:00+0800
 author:     "ZanXus"
-header-img: "img/blog/header/post-bg-01.jpg"
-thumbnail: /img/blog/thumbs/thumb01.png
+header-img: "img/blog/header/post-bg-05.jpg"
+thumbnail: /img/blog/thumbs/thumb05.png
 tags: [urllib]
 category: [python3]
 comments: true
