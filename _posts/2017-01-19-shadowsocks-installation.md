@@ -113,10 +113,10 @@ firewall-cmd --reload
 ## Now we can use shadowsocks  client to breakthrough the network limitation.
 
 ## Reference: 
-##                    [https://github.com/shadowsocks/shadowsocks-libev#install-from-repository-1](https://github.com/shadowsocks/shadowsocks-libev#install-from-repository-1)
-##                    [https://shadowsocks.org/en/config/quick-guide.html](https://shadowsocks.org/en/config/quick-guide.html)
-##                    [http://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html](http://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html)
-##                    [https://gist.github.com/aa65535/ea090063496b0d3a1748](https://gist.github.com/aa65535/ea090063496b0d3a1748)
+   [https://github.com/shadowsocks/shadowsocks-libev#install-from-repository-1](https://github.com/shadowsocks/shadowsocks-libev#install-from-repository-1)
+   [https://shadowsocks.org/en/config/quick-guide.html](https://shadowsocks.org/en/config/quick-guide.html)
+   [http://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html](http://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html)
+   [https://gist.github.com/aa65535/ea090063496b0d3a1748](https://gist.github.com/aa65535/ea090063496b0d3a1748)
 
 
 
